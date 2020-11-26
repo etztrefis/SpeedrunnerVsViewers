@@ -1,0 +1,13 @@
+name: SpeedrunnersVsViewers
+version: 1.0
+main: me.trefis.speedrunnervsviewers.PwgoodViewersHuntPlugin
+author: trefis
+api-version: 1.16
+
+commands:
+  speedrunner:
+    usage: /<command> <player> [remove]
+    description: Sets player as speedrunner.
+  grouplist:
+    usage: /<command>
+    description: Shows players in current groups.
