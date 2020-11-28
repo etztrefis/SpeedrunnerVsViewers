@@ -25,8 +25,10 @@ public class GrouplistCommand implements CommandExecutor {
         String speedrunners = formatPlayerList(playerData.getPlayersByRole(Roles.SPEEDRUNNER));
         result.append(ChatColor.YELLOW + "Speedrunners:\n").append(speedrunners);
 
+        result.append("\n");
+
         String hunters = formatPlayerList(playerData.getPlayersByRole(Roles.HUNTER));
-        result.append(ChatColor.DARK_PURPLE +  "\nHunters:\n").append(hunters);
+        result.append(ChatColor.AQUA +  "\nHunters:\n").append(hunters);
 
         sender.sendMessage(result.toString());
 
@@ -35,6 +37,6 @@ public class GrouplistCommand implements CommandExecutor {
     private String formatPlayerList(List<Player> players){
         return players.stream()
                 .map(HumanEntity::getName)
-                .collect(Collectors.joining("\n"));
+                .collect(Collectors.joining(", "));
     }
 }
