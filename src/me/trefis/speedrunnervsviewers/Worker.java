@@ -32,7 +32,7 @@ public class Worker implements  Runnable {
             float dz = (float) (Math.sin(angle) * 5);
             player.setCompassTarget(player.getLocation().add(new Vector(dx, 0, dz)));
 
-        } else {
+        }else {
             player.setCompassTarget(nearest.getLocation());
         }
     }
@@ -44,6 +44,7 @@ public class Worker implements  Runnable {
                 .filter(p -> !p.equals(player))
                 .filter(p -> playerData.getRole(p) == Roles.SPEEDRUNNER)
                 .filter(p -> p.getWorld().equals(player.getWorld()))
+                .filter(p -> p.getWorld().getEnvironment().equals(player.getWorld().getEnvironment()))
                 .min(Comparator.comparing(p -> p.getLocation().distance(playerLocation)))
                 .orElse(null);
     }
