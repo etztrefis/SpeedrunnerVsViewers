@@ -13,7 +13,7 @@ public class PwgoodViewersHuntPlugin extends JavaPlugin {
         TeamManager manager = new TeamManager(this);
         PlayerData playerData = new PlayerData();
 
-        getServer().getPluginManager().registerEvents(new Events(playerData, manager), this);
+        getServer().getPluginManager().registerEvents(new Events(playerData, manager, this), this);
 
         Optional.ofNullable(getCommand("speedrunner"))
                 .ifPresent(c -> c.setExecutor(new SpeedrunnerCommand(this, manager, playerData)));
