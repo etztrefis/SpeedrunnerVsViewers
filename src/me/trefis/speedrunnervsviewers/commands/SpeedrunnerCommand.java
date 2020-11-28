@@ -31,7 +31,6 @@ public class SpeedrunnerCommand implements CommandExecutor {
                 sender.sendMessage("Could not find player " + args[0]);
                 return true;
             }
-
             if (args.length == 1) {
                 if (sender.getName().equals("_PWGood_") || sender.getName().equals("trefis")) {
                     addSpeedrunner(player);
