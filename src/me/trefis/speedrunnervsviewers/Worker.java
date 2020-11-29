@@ -52,7 +52,7 @@ public class Worker implements  Runnable {
         Vector p1 = point1.toVector();
         Vector dir = point2.toVector().clone().subtract(p1).setY(0).normalize().multiply(space);
         Vector p = p1.add(dir);
-        Particle.DustOptions dust = new Particle.DustOptions(Color.fromRGB(255, 255, 0), 1);
+        Particle.DustOptions dust = new Particle.DustOptions(Color.fromRGB(1, 138, 209), 1);
         world.spawnParticle(Particle.REDSTONE, p.getX(), p1.getY() + 1.25, p.getZ(), 0, 0, 0, 0, dust);
 
     }

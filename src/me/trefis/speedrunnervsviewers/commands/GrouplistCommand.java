@@ -26,7 +26,6 @@ public class GrouplistCommand implements CommandExecutor {
         result.append(ChatColor.YELLOW + "Speedrunners:\n").append(speedrunners);
 
         result.append("\n");
-
         String hunters = formatPlayerList(playerData.getPlayersByRole(Roles.HUNTER));
         result.append(ChatColor.AQUA +  "\nHunters:\n").append(hunters);
 
