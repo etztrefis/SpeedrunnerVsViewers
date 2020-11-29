@@ -15,7 +15,7 @@
  
  # Usage
  
- ###### Commands
+ ##### Commands
  
  Use command `/speedrunner <username> [remove]` to add a player to speedrunners team.
  
