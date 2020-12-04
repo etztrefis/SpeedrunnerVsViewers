@@ -38,8 +38,9 @@ public class Worker implements  Runnable {
             player.setCompassTarget(nearest.getLocation());
             PlayerInventory inventory = player.getInventory();
             if (inventory.getItemInMainHand().getType() == Material.COMPASS || inventory.getItemInOffHand().getType() == Material.COMPASS) {
-                if (player.getWorld().getEnvironment() == World.Environment.NETHER || nearest.getWorld().getEnvironment() == World.Environment.NETHER
-                        || player.getWorld().getEnvironment() == World.Environment.THE_END || nearest.getWorld().getEnvironment() == World.Environment.THE_END) {
+                if (player.getWorld().getEnvironment() == World.Environment.NETHER || nearest.getWorld().getEnvironment() == World.Environment.NETHER) {
+                    drawDirection(player.getLocation(), nearest.getLocation(), 3);
+                }else if (player.getWorld().getEnvironment() == World.Environment.THE_END || nearest.getWorld().getEnvironment() == World.Environment.THE_END) {
                     drawDirection(player.getLocation(), nearest.getLocation(), 3);
                 }
             }
