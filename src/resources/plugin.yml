@@ -3,10 +3,14 @@ version: 1.1
 main: me.trefis.speedrunnervsviewers.PwgoodViewersHuntPlugin
 author: trefis
 api-version: 1.16
-
+permissions:
+  speedrunner.use:
+    default: op
 commands:
   speedrunner:
     usage: /<command> <player> [remove]
+    permission: speedrunner.use
+    permission-message: You dont have a permission to use this command.
     description: Sets player as speedrunner.
   grouplist:
     usage: /<command>
