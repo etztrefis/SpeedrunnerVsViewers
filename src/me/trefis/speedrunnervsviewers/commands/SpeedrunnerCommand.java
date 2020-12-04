@@ -32,12 +32,8 @@ public class SpeedrunnerCommand implements CommandExecutor {
                 return true;
             }
             if (args.length == 1) {
-                if (sender.getName().equals("_PWGood_") || sender.getName().equals("trefis")) {
                     addSpeedrunner(player);
                     sender.sendMessage(ChatColor.BLUE + "Added player: " + player.getName() + " to speedrunners.");
-                } else {
-                    sender.sendMessage(ChatColor.BLUE + "You cannot edit speedrunners list.");
-                }
                 return true;
             } else if (args.length == 2 && args[1].equals("remove")) {
                 removeSpeedrunner(player);
