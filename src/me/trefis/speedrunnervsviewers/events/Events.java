@@ -29,7 +29,6 @@ public class Events implements Listener {
     @EventHandler
     public void onJoining(PlayerJoinEvent event) {
         Player player = event.getPlayer();
-        player.sendMessage(ChatColor.YELLOW + "You were automatically assigned to the hunters team.");
         playerData.setRole(player, Roles.HUNTER);
         teamManager.addPlayer(Roles.HUNTER, player);
         ItemStack compass = new ItemStack(Material.COMPASS);

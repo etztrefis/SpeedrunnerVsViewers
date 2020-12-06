@@ -1,6 +1,7 @@
 package me.trefis.speedrunnervsviewers;
 import me.trefis.speedrunnervsviewers.context.Roles;
 
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
 import java.util.*;
@@ -31,6 +32,7 @@ public class PlayerData {
         PlayerDetails details = players.getOrDefault(player, new PlayerDetails());
         details.setRole(role);
         players.putIfAbsent(player, details);
+        player.sendMessage(ChatColor.AQUA + "You were assigned to the " + role + " team.");
     }
 
     private static class PlayerDetails{
