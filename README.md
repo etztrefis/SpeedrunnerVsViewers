@@ -6,7 +6,7 @@ A recreation of the man hunt plugin from Dreams videos, but if you are a streame
 
 # Installation 
 
-1. Download the latest realest from github [releases](https://github.com/etztrefis/SpeedrunnerVsViewers/releases) tab.
+1. Download from [spigotmc page](https://www.spigotmc.org/resources/speedrunners-vs-viewers.86819/) or the latest realest from github [releases](https://github.com/etztrefis/SpeedrunnerVsViewers/releases) tab.
 2. Put it in /plugins folder of your server.
 
 # Getting Started

@@ -56,13 +56,13 @@ public class Events implements Listener {
     }
 
     @EventHandler
-    public void onDeath(PlayerDeathEvent event){
+    public void onDeath(PlayerDeathEvent event) {
         Roles data = playerData.getRole(event.getEntity());
-        if(data == Roles.HUNTER){
+        if (data == Roles.HUNTER) {
             Bukkit.getBanList(BanList.Type.NAME).addBan(event.getEntity().getName(), ChatColor.GREEN + "Сможешь зайти в следующей игре!", null, "trefis");
-            Bukkit.getScheduler().runTaskLater(this.plugin, new Runnable(){
+            Bukkit.getScheduler().runTaskLater(this.plugin, new Runnable() {
                 @Override
-                public void run(){
+                public void run() {
                     Bukkit.getPlayer(event.getEntity().getName()).kickPlayer(ChatColor.GREEN + "Сможешь зайти в следующей игре!");
                 }
             }, 20 * 3);
@@ -70,8 +70,8 @@ public class Events implements Listener {
     }
 
     @EventHandler
-    public void onWorldLoad(ServerLoadEvent event){
-        for(OfflinePlayer player : Bukkit.getBannedPlayers()){
+    public void onWorldLoad(ServerLoadEvent event) {
+        for (OfflinePlayer player : Bukkit.getBannedPlayers()) {
             Bukkit.getBanList(BanList.Type.NAME).pardon(player.getName());
         }
     }
